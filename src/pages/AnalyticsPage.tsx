@@ -3,9 +3,7 @@ import { useAuth } from "../context/AuthContext";
 import { useTheme } from "../context/ThemeContext";
 import { useLicense } from "../context/LicenseContext";
 import { Product } from "../types";
-import { Button } from "../components/ui/button";
 import { BarChart3, TrendingUp, Share2, Package, Calendar } from "lucide-react";
-
 export default function AnalyticsPage() {
   const { user } = useAuth();
   const { isDark } = useTheme();
@@ -47,9 +45,9 @@ export default function AnalyticsPage() {
           <p className={`mt-2 ${isDark ? "text-purple-300" : "text-gray-500"}`}>
             Upgrade to access detailed analytics and insights
           </p>
-          <Button className="mt-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white">
-            Upgrade Now
-          </Button>
+         <button className="mt-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white px-4 py-2 rounded">
+  Upgrade Now
+</button>
         </div>
       </div>
     );
