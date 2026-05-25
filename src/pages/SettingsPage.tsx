@@ -33,8 +33,7 @@ export default function SettingsPage() {
             return (
               <button
                 key={tab.id}
-                variant={activeTab === tab.id ? "default" : "ghost"}
-                onClick={() => setActiveTab(tab.id)}
+               nClick={() => setActiveTab(tab.id)}
                 className={`justify-start ${
                   activeTab === tab.id
                     ? "bg-violet-600 text-white"
