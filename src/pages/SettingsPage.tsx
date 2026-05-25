@@ -7,14 +7,12 @@ export default function SettingsPage() {
   const { user, logout } = useAuth();
   const { isDark, toggleTheme } = useTheme();
   const [activeTab, setActiveTab] = useState("profile");
-
   const tabs = [
     { id: "profile", label: "Profile", icon: User },
     { id: "security", label: "Security", icon: Shield },
     { id: "notifications", label: "Notifications", icon: Bell },
     { id: "appearance", label: "Appearance", icon: Palette },
   ];
-
   return (
     <div className="space-y-6">
       <div>
@@ -25,7 +23,6 @@ export default function SettingsPage() {
           Manage your account preferences
         </p>
       </div>
-
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-48 flex md:flex-col gap-2">
           {tabs.map((tab) => {
@@ -48,7 +45,6 @@ export default function SettingsPage() {
             );
           })}
         </div>
-
         <div className="flex-1">
           <div
             className={`rounded-2xl p-6 border ${
@@ -93,7 +89,6 @@ export default function SettingsPage() {
                 </button>
               </div>
             )}
-
             {activeTab === "security" && (
               <div className="space-y-4">
                 <h2 className={`text-lg font-semibold ${isDark ? "text-white" : "text-gray-900"}`}>
@@ -120,7 +115,6 @@ export default function SettingsPage() {
                 </div>
               </div>
             )}
-
             {activeTab === "notifications" && (
               <div className="space-y-4">
                 <h2 className={`text-lg font-semibold ${isDark ? "text-white" : "text-gray-900"}`}>
@@ -157,7 +151,6 @@ export default function SettingsPage() {
                 </div>
               </div>
             )}
-
             {activeTab === "appearance" && (
               <div className="space-y-4">
                 <h2 className={`text-lg font-semibold ${isDark ? "text-white" : "text-gray-900"}`}>
