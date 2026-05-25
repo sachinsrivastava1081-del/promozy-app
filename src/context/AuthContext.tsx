@@ -16,7 +16,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 // OWNER MASTER CREDENTIALS - PROTECTED
 const OWNER_CREDENTIALS = {
   email: "owner@promozy.com",
-  password: "Promozy@Owner2024!",
+  password: "CHANGE_THIS_PASSWORD",
   user: {
     id: "owner-master-001",
     email: "owner@promozy.com",
@@ -34,7 +34,7 @@ const OWNER_CREDENTIALS = {
 // ADMIN CREDENTIALS
 const ADMIN_CREDENTIALS = {
   email: "admin@promozy.com",
-  password: "Admin@Promozy2024!",
+  password: "CHANGE_THIS_PASSWORD",
   user: {
     id: "admin-001",
     email: "admin@promozy.com",
