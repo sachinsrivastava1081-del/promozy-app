@@ -1,7 +1,4 @@
 import { useState } from "react";
-import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
-import { Label } from "../components/ui/label";
 import { useAuth } from "../context/AuthContext";
 import { Sparkles, Mail, Lock, User, Shield } from "lucide-react";
 
@@ -42,10 +39,10 @@ export default function RegisterPage({ onSwitchToLogin }: RegisterPageProps) {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="name" className="text-purple-200">Full Name</Label>
+              <label htmlFor="name" className="text-purple-200">Full Name</label>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-purple-400" />
-                <Input
+                <input
                   id="name"
                   type="text"
                   placeholder="John Doe"
@@ -58,10 +55,10 @@ export default function RegisterPage({ onSwitchToLogin }: RegisterPageProps) {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-purple-200">Email Address</Label>
+              <label htmlFor="email" className="text-purple-200">Email Address</label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-purple-400" />
-                <Input
+                <input
                   id="email"
                   type="email"
                   placeholder="you@example.com"
@@ -74,10 +71,10 @@ export default function RegisterPage({ onSwitchToLogin }: RegisterPageProps) {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="password" className="text-purple-200">Password</Label>
+              <label htmlFor="password" className="text-purple-200">Password</label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-purple-400" />
-                <Input
+                <input
                   id="password"
                   type="password"
                   placeholder="••••••••"
@@ -95,13 +92,13 @@ export default function RegisterPage({ onSwitchToLogin }: RegisterPageProps) {
               </p>
             </div>
 
-            <Button
+            <button
               type="submit"
               disabled={isLoading}
               className="w-full bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white py-6 text-lg font-semibold shadow-lg shadow-purple-500/25"
             >
               {isLoading ? "Creating Account..." : "Create Account"}
-            </Button>
+            </button>
           </form>
 
           <div className="mt-6 text-center">
