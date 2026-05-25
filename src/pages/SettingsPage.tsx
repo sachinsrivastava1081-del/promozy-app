@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useTheme } from "../context/ThemeContext";
-import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
-import { Label } from "../components/ui/label";
 import { User, Shield, Bell, Palette, Key } from "lucide-react";
 
 export default function SettingsPage() {
@@ -34,7 +31,7 @@ export default function SettingsPage() {
           {tabs.map((tab) => {
             const Icon = tab.icon;
             return (
-              <Button
+              <button
                 key={tab.id}
                 variant={activeTab === tab.id ? "default" : "ghost"}
                 onClick={() => setActiveTab(tab.id)}
@@ -48,7 +45,7 @@ export default function SettingsPage() {
               >
                 <Icon className="w-4 h-4 mr-2" />
                 {tab.label}
-              </Button>
+              </button>
             );
           })}
         </div>
@@ -66,35 +63,35 @@ export default function SettingsPage() {
                 </h2>
                 <div className="grid gap-4">
                   <div className="space-y-2">
-                    <Label className={isDark ? "text-purple-200" : ""}>Full Name</Label>
-                    <Input
+                    <label className={isDark ? "text-purple-200" : ""}>Full Name</label>
+                    <input
                       defaultValue={user?.name}
                       className={isDark ? "bg-slate-800 border-purple-700/50 text-white" : ""}
-                    />
+                    /input>
                   </div>
                   <div className="space-y-2">
-                    <Label className={isDark ? "text-purple-200" : ""}>Email</Label>
-                    <Input
+                    <label className={isDark ? "text-purple-200" : ""}>Email</label>
+                    <input
                       defaultValue={user?.email}
                       disabled
                       className={isDark ? "bg-slate-800 border-purple-700/50 text-white" : ""}
-                    />
+                    /input>
                   </div>
                   <div className="space-y-2">
-                    <Label className={isDark ? "text-purple-200" : ""}>License ID</Label>
+                    <label className={isDark ? "text-purple-200" : ""}>License ID</label>
                     <div className="flex items-center gap-2">
                       <Key className={`w-4 h-4 ${isDark ? "text-purple-400" : "text-gray-400"}`} />
-                      <Input
+                      <input
                         value={user?.licenseId}
                         disabled
                         className={`font-mono text-sm ${isDark ? "bg-slate-800 border-purple-700/50 text-purple-300" : ""}`}
-                      />
+                      /input>
                     </div>
                   </div>
                 </div>
-                <Button className="mt-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white">
+                <button className="mt-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white">
                   Save Changes
-                </Button>
+                </button>
               </div>
             )}
 
@@ -106,21 +103,21 @@ export default function SettingsPage() {
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <Label className={isDark ? "text-purple-200" : ""}>Current Password</Label>
-                    <Input
+                    <input
                       type="password"
                       className={isDark ? "bg-slate-800 border-purple-700/50 text-white" : ""}
-                    />
+                    /input>
                   </div>
                   <div className="space-y-2">
-                    <Label className={isDark ? "text-purple-200" : ""}>New Password</Label>
-                    <Input
+                    <label className={isDark ? "text-purple-200" : ""}>New Password</label>
+                    <input
                       type="password"
                       className={isDark ? "bg-slate-800 border-purple-700/50 text-white" : ""}
                     />
                   </div>
-                  <Button className="bg-gradient-to-r from-violet-600 to-purple-600 text-white">
+                  <button className="bg-gradient-to-r from-violet-600 to-purple-600 text-white">
                     Update Password
-                  </Button>
+                  </button>
                 </div>
               </div>
             )}
