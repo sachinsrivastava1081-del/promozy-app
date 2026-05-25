@@ -67,7 +67,7 @@ export default function SettingsPage() {
                     <input
                       defaultValue={user?.name}
                       className={isDark ? "bg-slate-800 border-purple-700/50 text-white" : ""}
-                    /input>
+                    />
                   </div>
                   <div className="space-y-2">
                     <label className={isDark ? "text-purple-200" : ""}>Email</label>
@@ -75,7 +75,7 @@ export default function SettingsPage() {
                       defaultValue={user?.email}
                       disabled
                       className={isDark ? "bg-slate-800 border-purple-700/50 text-white" : ""}
-                    /input>
+                    />
                   </div>
                   <div className="space-y-2">
                     <label className={isDark ? "text-purple-200" : ""}>License ID</label>
@@ -85,7 +85,7 @@ export default function SettingsPage() {
                         value={user?.licenseId}
                         disabled
                         className={`font-mono text-sm ${isDark ? "bg-slate-800 border-purple-700/50 text-purple-300" : ""}`}
-                      /input>
+                      />
                     </div>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ export default function SettingsPage() {
                     <input
                       type="password"
                       className={isDark ? "bg-slate-800 border-purple-700/50 text-white" : ""}
-                    /input>
+                    />
                   </div>
                   <div className="space-y-2">
                     <label className={isDark ? "text-purple-200" : ""}>New Password</label>
